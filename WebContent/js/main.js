@@ -58,7 +58,7 @@ $(window).load(
 								 		<label>state</label>
 								 		<input type="text" readonly="readonly" style="font-size: 2em" value=${orders[i].state}>
 									 	<label>note</label>
-								 		<input type="text" readonly="readonly" style="font-size: 2em" value=${orders[i].note}>
+								 		<input type="text" readonly="readonly" style="font-size: 2em" value="${orders[i].note}">
 									</div>
 								</div>
 							</div>

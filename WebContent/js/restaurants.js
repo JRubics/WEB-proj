@@ -322,7 +322,7 @@ function addDrinkTable(restaurant){
 			//window.location.href ="admin.html"
 			var articles = JSON.parse(data.responseText);
 			
-			var str = "<table id=\"drinktable\"><tr><td>Name</td><td>Price</td><td colspan=\"2\">About</td><td>Quantity</td><td></td></tr>";
+			var str = "<table id=\"drinktable\"><tr><td>Name</td><td>Price ($)</td><td colspan=\"2\">About</td><td>Quantity</td><td></td></tr>";
 			
 			for (i = 0; i < articles.length; i++) {
 				if(articles[i].active==true){
@@ -386,7 +386,7 @@ function addDrink1Table(restaurant){//iz restorana
 		complete: function(data) {
 			try{
 				var articles = JSON.parse(data.responseText);
-				var str = "<table id=\"drinktable1\"><tr><td>Name</td><td>Price</td><td colspan=\"2\">About</td><td>Quantity</td><td></td></tr>";
+				var str = "<table id=\"drinktable1\"><tr><td>Name</td><td>Price ($)</td><td colspan=\"2\">About</td><td>Quantity</td><td></td></tr>";
 				
 				for (i = 0; i < articles.length; i++) {
 					if(articles[i].active==true){
@@ -406,7 +406,7 @@ function addDrink1Table(restaurant){//iz restorana
 				    Obj.outerHTML=str;
 				}
 			}catch (e) { //nema artikle
-				var str = "<table id=\"drinktable1\"><tr><td>Name</td><td>Price</td><td colspan=\"2\">About</td><td>Quantity</td><td></td></tr>";
+				var str = "<table id=\"drinktable1\"><tr><td>Name</td><td>Price ($)</td><td colspan=\"2\">About</td><td>Quantity</td><td></td></tr>";
 				str += "</table>";
 				var Obj = document.getElementById('drinktable1');
 				if(Obj.outerHTML) {
@@ -427,7 +427,7 @@ function showDrinkTable(restaurant){//iz restorana
 		complete: function(data) {
 			try{
 				var articles = JSON.parse(data.responseText);
-				var str = "<table id=\"drinktable1\"><tr><td>Name</td><td>Price</td><td colspan=\"2\">About</td><td>Quantity</td><td></td></tr>";
+				var str = "<table id=\"drinktable1\"><tr><td>Name</td><td>Price ($)</td><td colspan=\"2\">About</td><td>Quantity</td><td></td></tr>";
 				
 				for (i = 0; i < articles.length; i++) {
 					if(articles[i].active==true){
@@ -447,7 +447,7 @@ function showDrinkTable(restaurant){//iz restorana
 				    Obj.outerHTML=str;
 				}
 			}catch (e) { //nema artikle
-				var str = "<table id=\"drinktable1\"><tr><td>Name</td><td>Price</td><td colspan=\"2\">About</td><td>Quantity</td><td></td></tr>";
+				var str = "<table id=\"drinktable1\"><tr><td>Name</td><td>Price ($)</td><td colspan=\"2\">About</td><td>Quantity</td><td></td></tr>";
 				str += "</table>";
 				var Obj = document.getElementById('drinktable1');
 				if(Obj.outerHTML) {
@@ -468,7 +468,7 @@ function showFoodTable(restaurant){//iz restorana
 		complete: function(data) {
 			try{
 				var articles = JSON.parse(data.responseText);
-				var str = "<table id=\"foodtable1\"><tr><td>Name</td><td>Price</td><td colspan=\"2\">About</td><td>Quantity</td><td></td></tr>";
+				var str = "<table id=\"foodtable1\"><tr><td>Name</td><td>Price ($)</td><td colspan=\"2\">About</td><td>Quantity</td><td></td></tr>";
 				
 				for (i = 0; i < articles.length; i++) {
 					if(articles[i].active==true){
@@ -488,7 +488,7 @@ function showFoodTable(restaurant){//iz restorana
 				    Obj.outerHTML=str;
 				}
 			}catch (e) { //nema artikle
-				var str = "<table id=\"foodtable1\"><tr><td>Name</td><td>Price</td><td colspan=\"2\">About</td><td>Quantity</td><td></td></tr>";
+				var str = "<table id=\"foodtable1\"><tr><td>Name</td><td>Price ($)</td><td colspan=\"2\">About</td><td>Quantity</td><td></td></tr>";
 				str += "</table>";
 				var Obj = document.getElementById('foodtable1');
 				if(Obj.outerHTML) {
@@ -509,7 +509,7 @@ function addFood1Table(restaurant){//iz restorana
 		complete: function(data) {
 			try{
 				var articles = JSON.parse(data.responseText);
-				var str = "<table id=\"foodtable1\"><tr><td>Name</td><td>Price</td><td colspan=\"2\">About</td><td>Quantity</td><td></td></tr>";
+				var str = "<table id=\"foodtable1\"><tr><td>Name</td><td>Price ($)</td><td colspan=\"2\">About</td><td>Quantity</td><td></td></tr>";
 				
 				for (i = 0; i < articles.length; i++) {
 					if(articles[i].active==true){
@@ -529,7 +529,7 @@ function addFood1Table(restaurant){//iz restorana
 				    Obj.outerHTML=str;
 				}
 			}catch (e) { //nema artikle
-				var str = "<table id=\"foodtable1\"><tr><td>Name</td><td>Price</td><td colspan=\"2\">About</td><td>Quantity</td><td></td></tr>";
+				var str = "<table id=\"foodtable1\"><tr><td>Name</td><td>Price ($)</td><td colspan=\"2\">About</td><td>Quantity</td><td></td></tr>";
 				str += "</table>";
 				var Obj = document.getElementById('foodtable1');
 				if(Obj.outerHTML) {

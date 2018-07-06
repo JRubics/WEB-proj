@@ -15,7 +15,7 @@ $(window).load(
 					window.location = "login.html";
 				}else{
 					var myMap = JSON.parse(data.responseText);
-					var str = "<table id=\"articletable\"><tr><td>Name</td><td>Price</td><td colspan=\"2\">About</td><td>Quantity</td><td>Type</td><td>Count</td></tr>";
+					var str = "<table id=\"articletable\"><tr><td>Name</td><td>Price</td><td colspan=\"2\">About</td><td>Quantity</td><td>Type</td><td>Number</td></tr>";
 					
 					var i = 0;
 					var empty = false;
@@ -24,13 +24,14 @@ $(window).load(
 						var article = JSON.parse(m);
 						if(article.active==true){
 							var id = article.name;
+							//alert(id);
 							str += "<tr>" +
 							"<td>"+ id +"</td>" +
 							"<td>"+ article.price +"</td>" +
 							"<td colspan=\"2\">"+ article.about +"</td>" +
 							"<td>"+ article.quantity +"</td>" +
 							"<td>"+ article.type +"</td>" +
-							"<td>  <input type=\"number\" class=\"quantity" + id + "\" name=\"quantity\" style=\"width:2em;\" onchange=\"quantityChanged(" + id + ")\" value=" + myMap[m] +"></td>" +
+							"<td>"+ myMap[m] +"</td>" +
 							"</tr>";
 						}
 						i = i + 1;
@@ -70,7 +71,6 @@ $(window).load(
 
 function quantityChanged(id){
 	var quantity = $(".quantity" + id).val();
-	
 	var s = [id,quantity];
 	s = JSON.stringify(s);
 	$.ajax({
@@ -89,7 +89,6 @@ function confirmOrder(event){
 	var note = $(".note-class").val();
 	var points = $("#point-id").val();
 	s = JSON.stringify([note,points]);
-	alert(s);
 	$.ajax({
 		url: "rest/orders/confirmOrder",
 		type:"POST",

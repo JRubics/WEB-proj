@@ -63,7 +63,7 @@ function showFood(){
 			//window.location.href ="admin.html"
 			var articles = JSON.parse(data.responseText);
 			
-			var str = "<table id=\"foodtable\"><tr><td>Name</td><td>Price</td><td colspan=\"2\">About</td><td>Quantity</td><td></td><td></td></tr>";
+			var str = "<table id=\"foodtable\"><tr><td>Name</td><td>Price ($)</td><td colspan=\"2\">About</td><td>Quantity</td><td></td><td></td></tr>";
 			
 			for (i = 0; i < articles.length; i++) {
 				if(articles[i].active==true){
@@ -98,7 +98,7 @@ function showDrink(){
 			//window.location.href ="admin.html"
 			var articles = JSON.parse(data.responseText);
 			
-			var str = "<table id=\"drinktable\"><tr><td>Name</td><td>Price</td><td colspan=\"2\">About</td><td>Quantity</td><td></td><td></td></tr>";
+			var str = "<table id=\"drinktable\"><tr><td>Name</td><td>Price ($)</td><td colspan=\"2\">About</td><td>Quantity</td><td></td><td></td></tr>";
 			
 			for (i = 0; i < articles.length; i++) {
 				if(articles[i].active==true){
@@ -153,7 +153,6 @@ function confirmEdit(type){
 	var $form = $("#edit-form");
 	var data = getFormData($form);
 	var s = JSON.stringify(data);
-	alert(s);
 	//window.alert(s);
 	$.ajax({
 		url: "rest/articles/edit",
