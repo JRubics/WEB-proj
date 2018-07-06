@@ -1,0 +1,264 @@
+<!doctype html>
+<html>
+	<head>
+		<title>WEB</title>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<script src="jquery.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/showpopular.js"></script>
+		<script type="text/javascript" src="js/restaurants.js"></script>
+		
+		<!-- bootstrap css je predefinisan -->
+		<link href="b4/css/bootstrap.css" rel="stylesheet"> 
+		<script src="borig/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<link href="jquery.min.js" rel="stylesheet">
+		<!-- bootstrap -->
+		
+		<!-- materialize -->
+	    <link href="materialize/css/materialize.min.css" rel="stylesheet">
+	    <script src="materialize/js/materialize.min.js"></script>
+	    <!-- materialize -->
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg bg-primary ">
+		    <a class="navbar-brand" onMouseOver="this.style.color='#ffffff';this.style.textDecoration='none';" href="index.html">Web-project</a>
+		    <div class="collapse navbar-collapse" id="basicExampleNav">
+		        <ul class="navbar-nav mr-auto navbar-list">
+		            <li class="nav-item active">
+		                <a class="nav-link login-class" href="login.html" onclick="login()" onMouseOver="this.style.color='#ffffff';this.style.textDecoration='none';">Log in
+		                    <span class="sr-only">(current)</span>
+		                </a>
+		            </li>
+		            <li class="nav-item">
+		                <a class="nav-link logout-class" href="#" onclick="logout()" onMouseOver="this.style.color='#ffffff';this.style.textDecoration='none';">Log out</a>
+		            </li>
+		            <li class="nav-item">
+		                <a class="nav-link" href="registration.html" onMouseOver="this.style.color='#ffffff';this.style.textDecoration='none';">Sign in</a>
+		            </li>
+		            
+		            <li class="nav-item">
+		                <a class="nav-link admin-button" href="admin.html" onMouseOver="this.style.color='#ffffff';this.style.textDecoration='none';">Edit users</a>
+		            </li>
+		            
+		            <li class="nav-item">
+		                <a class="nav-link" onMouseOver="this.style.color='#ffffff';this.style.textDecoration='none';">|</a>
+		            </li>
+		            
+		            <li class="nav-item">
+		                <a class="nav-link admin-button byer-button not-logged-in" href="search.html" onMouseOver="this.style.color='#ffffff';this.style.textDecoration='none';">Search</a>
+		            </li>
+		            
+		            <li class="nav-item">
+		                <a class="nav-link byer-button" href="order.html" onMouseOver="this.style.color='#ffffff';this.style.textDecoration='none';">Shopping cart</a>
+		            </li>
+		            
+		            <li class="nav-item">
+		                <a class="nav-link byer-button" href="main.html" onMouseOver="this.style.color='#ffffff';this.style.textDecoration='none';">User page</a>
+		            </li>
+		            
+		            <li class="nav-item">
+		                <a class="nav-link delivery-button" href="delivery.html" onMouseOver="this.style.color='#ffffff';this.style.textDecoration='none';">Delivery page</a>
+		            </li>
+		            
+		            <li class="nav-item">
+		                <a class="nav-link delivery-button" href="deliveryVehicle.html" onMouseOver="this.style.color='#ffffff';this.style.textDecoration='none';">Choose vehicle</a>
+		            </li>
+		            
+		             <li class="nav-item">
+		                <a class="nav-link admin-button" href="adminorders.html" onMouseOver="this.style.color='#ffffff';this.style.textDecoration='none';">Make order</a>
+		            </li>
+		            
+		            <li class="nav-item dropdown admin-button">
+				        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" onMouseOver="this.style.color='#ffffff';this.style.textDecoration='none';" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				          ADMIN PAGE
+				        </a>
+				        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				          <a class="dropdown-item" style="color: black;" href="restaurants.html">Restaurants</a>
+				          <a class="dropdown-item" style="color: black;" href="articles.html">Articles</a>
+				          <a class="dropdown-item" style="color: black;" href="vehicles.html">Vehicles</a>
+				          <a class="dropdown-item" style="color: black;" href="editadminorder.html">Orders</a>
+				        </div>
+      				</li>
+		        </ul>
+		    </div>
+		</nav>
+		<div class="row popular-articles">
+			<div class="card col-lg-2 col-md-2"></div>
+			<div class="card col-lg-8 col-md-8">
+				<h3>Popular articles</h3>
+				<table id="populartable">
+				
+					
+				</table>
+			</div>
+			<div class="card col-lg-2 col-md-2"></div>
+		</div>
+		<div class="row">
+			<div class="card col-lg-1 col-md-1"></div>
+			<div class="card col-lg-2 col-md-2">
+				<img class="card-img-top" src="resources/chicken.png" alt="Card image cap" style="max-width: 100%;max-height: 100%;">
+				<div class="card-body">
+					<h5 class="card-title">LOCAL</h5>
+					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					<a class="btn btn-primary" onclick="showLocalMainPage()">Show all</a>
+				</div>
+			</div>
+			<div class="card col-lg-2 col-md-2"></div>
+			<div class="card col-lg-2 col-md-2">
+				<img class="card-img-top" src="resources/hamburger.png" alt="Card image cap" style="max-width: 100%;max-height: 100%;">
+				<div class="card-body">
+					<h5 class="card-title">GRILL</h5>
+					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					<a class="btn btn-primary" onclick="showGrillMainPage()">Show all</a>
+				</div>
+			</div>
+			<div class="card col-lg-2 col-md-2"></div>
+			<div class="card col-lg-2 col-md-2">
+				<img class="card-img-top" src="resources/rice.png" alt="Card image cap" style="max-width: 100%;max-height: 100%;">
+				<div class="card-body">
+					<h5 class="card-title">CHINESE</h5>
+					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					<a class="btn btn-primary" onclick="showChineseMainPage()">Show all</a>
+				</div>
+			</div>
+			<div class="card col-lg-1 col-md-1"></div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="card col-lg-1 col-md-1"></div>
+			<div class="card col-lg-2 col-md-2">
+				<img class="card-img-top" src="resources/indian.png" alt="Card image cap" style="max-width: 100%;max-height: 100%;">
+				<div class="card-body">
+					<h5 class="card-title">INDIAN</h5>
+					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					<a class="btn btn-primary" onclick="showIndianMainPage()">Show all</a>
+				</div>
+			</div>
+			<div class="card col-lg-2 col-md-2"></div>
+			<div class="card col-lg-2 col-md-2">
+				<img class="card-img-top" src="resources/cake.png" alt="Card image cap" style="max-width: 100%;max-height: 100%;">
+				<div class="card-body">
+					<h5 class="card-title">SWEETS</h5>
+					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					<a class="btn btn-primary" onclick="showSweetsMainPage()">Show all</a>
+				</div>
+			</div>
+			<div class="card col-lg-2 col-md-2"></div>
+			<div class="card col-lg-2 col-md-2">
+				<img class="card-img-top" src="resources/pizza.png" alt="Card image cap" style="max-width: 100%;max-height: 100%;">
+				<div class="card-body">
+					<h5 class="card-title">ITALIAN</h5>
+					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					<a class="btn btn-primary" onclick="showItalianMainPage()">Show all</a>
+				</div>
+			</div>
+			<div class="card col-lg-1 col-md-1"></div>
+		</div>
+		<div class="row all-articles show-local-page">
+			<div class="col-lg-3 col-md-3"></div>
+			<div class="col-lg-6 col-md-6">
+				<table id="localtable">
+				
+				</table>
+			</div>
+			<div class="col-lg-3 col-md-3"></div>
+		</div>
+		<div class="row all-articles show-grill-page">
+			<div class="col-lg-3 col-md-3"></div>
+			<div class="col-lg-6 col-md-6">
+				<table id="grilltable">
+				
+				</table>
+			</div>
+			<div class="col-lg-3 col-md-3"></div>
+		</div>
+		<div class="row all-articles show-chinese-page">
+			<div class="col-lg-3 col-md-3"></div>
+			<div class="col-lg-6 col-md-6">
+				<table id="chinesetable">
+				
+				</table>
+			</div>
+			<div class="col-lg-3 col-md-3"></div>
+		</div>
+		<div class="row all-articles show-indian-page">
+			<div class="col-lg-3 col-md-3"></div>
+			<div class="col-lg-6 col-md-6">
+				<table id="indiantable">
+				
+				</table>
+			</div>
+			<div class="col-lg-3 col-md-3"></div>
+		</div>
+		<div class="row all-articles show-sweets-page">
+			<div class="col-lg-3 col-md-3"></div>
+			<div class="col-lg-6 col-md-6">
+				<table id="sweetstable">
+				
+				</table>
+			</div>
+			<div class="col-lg-2 col-md-2"></div>
+		</div>
+		<div class="row all-articles show-italian-page">
+			<div class="col-lg-3 col-md-3"></div>
+			<div class="col-lg-6 col-md-6">
+				<table id="italiantable">
+				
+				</table>
+			</div>
+			<div class="col-lg-3 col-md-3"></div>
+		</div>
+		<div class="row all-articles menu-page">
+			<div class="col-lg-3 col-md-3"></div>
+			<form class="col-lg-6 col-md-6" id="edit-form">
+			<table>
+				<th colspan="3"><p align="center" style="font-weight: bold;font-size: 2em">RESTAURANT</p></th>
+				<tr>
+					<td>
+						<div class="form-group">
+							  <label>Name</label>
+							  <input type="text" class="form-control edit-name" name="name" placeholder="Enter name" readonly="readonly">
+						</div>
+				  	</td>
+				  	<td></td>
+					<td>
+						<div class="form-group">
+							  <label>Adress</label>
+							  <input type="text" class="form-control edit-adress" name="adress" placeholder="Enter adress" readonly="readonly">
+						</div>
+					</td>
+			  	</tr>
+			  	<tr>
+					<td colspan="3">
+						Drinks:
+					</td>
+			  	</tr>
+			  	<tr>
+					<td colspan="3">
+						<table id="drinktable1">
+					
+					
+						</table>
+					</td>
+			  	</tr>
+			  	<tr>
+					<td colspan="3">
+						Food:
+					</td>
+			  	</tr>
+			  	<tr>
+					<td colspan="3">
+						<table id="foodtable1">
+						</table>
+					</td>
+			  	</tr>
+			  </table>
+			  <label style="font-size: 20px; text-align: center;" id="resultRestaurant"></label>
+			</form>
+			<div class="col-lg-3 col-md-3"></div>
+		</div>
+</html>

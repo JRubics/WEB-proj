@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+	<head>
+		<title>WEB</title>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<script src="jquery.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/delivery.js"></script>
+		
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+		
+		<!-- bootstrap css je predefinisan -->
+		<link href="b4/css/bootstrap.css" rel="stylesheet"> 
+		<script src="borig/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<link href="jquery.min.js" rel="stylesheet">
+		<!-- bootstrap -->
+		
+		<!-- materialize -->
+	    <link href="materialize/css/materialize.min.css" rel="stylesheet">
+	    <script src="materialize/js/materialize.min.js"></script>
+	    <!-- materialize -->
+	</head>
+	<body>
+		<nav class="navbar navbar-expand-lg bg-primary ">
+		    <a class="navbar-brand" onMouseOver="this.style.color='#ffffff';this.style.textDecoration='none';" href="index.html">Web-project</a>
+		    <div class="collapse navbar-collapse" id="basicExampleNav">
+		        <ul class="navbar-nav mr-auto navbar-list">
+		            <li class="nav-item active">
+		                <a class="nav-link login-class" href="login.html" onclick="login()" onMouseOver="this.style.color='#ffffff';this.style.textDecoration='none';">Log in
+		                    <span class="sr-only">(current)</span>
+		                </a>
+		            </li>
+		            <li class="nav-item">
+		                <a class="nav-link logout-class" href="#" onclick="logout()" onMouseOver="this.style.color='#ffffff';this.style.textDecoration='none';">Log out</a>
+		            </li>
+		            <li class="nav-item">
+		                <a class="nav-link" href="registration.html" onMouseOver="this.style.color='#ffffff';this.style.textDecoration='none';">Sign in</a>
+		            </li>
+		            
+		            <li class="nav-item">
+		                <a class="nav-link admin-button" href="admin.html" onMouseOver="this.style.color='#ffffff';this.style.textDecoration='none';">Edit users</a>
+		            </li>
+		            
+		            <li class="nav-item">
+		                <a class="nav-link" onMouseOver="this.style.color='#ffffff';this.style.textDecoration='none';">|</a>
+		            </li>
+		            
+		            <li class="nav-item">
+		                <a class="nav-link admin-button byer-button not-logged-in" href="search.html" onMouseOver="this.style.color='#ffffff';this.style.textDecoration='none';">Search</a>
+		            </li>
+		            
+		            <li class="nav-item">
+		                <a class="nav-link byer-button" href="order.html" onMouseOver="this.style.color='#ffffff';this.style.textDecoration='none';">Shopping cart</a>
+		            </li>
+		            
+		            <li class="nav-item">
+		                <a class="nav-link byer-button" href="main.html" onMouseOver="this.style.color='#ffffff';this.style.textDecoration='none';">User page</a>
+		            </li>
+		            
+		            <li class="nav-item">
+		                <a class="nav-link delivery-button" href="delivery.html" onMouseOver="this.style.color='#ffffff';this.style.textDecoration='none';">Delivery page</a>
+		            </li>
+		            
+		            <li class="nav-item">
+		                <a class="nav-link delivery-button" href="deliveryVehicle.html" onMouseOver="this.style.color='#ffffff';this.style.textDecoration='none';">Choose vehicle</a>
+		            </li>
+		            
+		             <li class="nav-item">
+		                <a class="nav-link admin-button" href="adminorders.html" onMouseOver="this.style.color='#ffffff';this.style.textDecoration='none';">Make order</a>
+		            </li>
+		            
+		            <li class="nav-item dropdown admin-button">
+				        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" onMouseOver="this.style.color='#ffffff';this.style.textDecoration='none';" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				          ADMIN PAGE
+				        </a>
+				        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				          <a class="dropdown-item" style="color: black;" href="restaurants.html">Restaurants</a>
+				          <a class="dropdown-item" style="color: black;" href="articles.html">Articles</a>
+				          <a class="dropdown-item" style="color: black;" href="vehicles.html">Vehicles</a>
+				          <a class="dropdown-item" style="color: black;" href="editadminorder.html">Orders</a>
+				        </div>
+      				</li>
+		        </ul>
+		    </div>
+		</nav>
+		<div class="row all-articles" id="show-delivery-page">
+			<div class="col-lg-2 col-md-2"></div>
+			<div class="col-lg-8 col-md-8">
+				<h4 >There are no deliveries</h4>
+				<div id="showDelivery">
+				</div>
+		</div>
+		</div>
+		<div class="row all-articles" id="show-orders-page">
+			<div class="col-lg-2 col-md-2"></div>
+			<div class="col-lg-8 col-md-8">
+				<h4 >There are no orders</h4>
+				<div id="showOrderHistory">
+				</div>
+		</div>
+		</div>
+</html>
